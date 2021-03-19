@@ -18,6 +18,7 @@
     --machine-fill: #6e6e6d;
     --machine-stroke: #383838;
     --dark-back:  rgb(37, 37, 37);
+    --highlight: #566ec7;
 }
 
 body {
@@ -275,8 +276,53 @@ h2 span {
     font-size: 1.1rem;
 }
 
+.tippy-key,
+.tippy-value,
+.tippy-number {
+    padding: 0 .2rem;
+    border-radius: 2px;
+}
+.tippy-key:hover,
+.tippy-value:hover,
+.tippy-number:hover {
+    background: var(--highlight);
+}
+
+.highlight {
+    animation-name: high;
+    animation-duration: 1.5s;
+}
+
+
+.tippy-box[data-theme~='light'] {
+    background-color: var(--main-text);
+    color: var(--darkest-main-color);
+    font-weight: bold;
+}
+.tippy-box[data-theme~='light'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: var(--main-text)
+  }
+  .tippy-box[data-theme~='light'][data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: var(--main-text)
+  }
+  .tippy-box[data-theme~='light'][data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: var(--main-text)
+  }
+  .tippy-box[data-theme~='light'][data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: var(--main-text)
+  }
+
 @media (min-width: 1100px) {
     .result {
         position: relative;
+    }
+}
+
+@keyframes high {
+    from {
+        background: var(--highlight);
+    }
+    to {
+        background: none;
     }
 }

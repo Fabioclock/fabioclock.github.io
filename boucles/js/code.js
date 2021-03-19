@@ -90,6 +90,7 @@ const code = {
 
         const board = document.querySelector('.result-board ul');
         board.appendChild(step);
+        code.highlightChangedVars();
 
     },
     loopAll: function(){
@@ -118,6 +119,12 @@ const code = {
 
                 fillable.appendChild(clone);
             }
+        }
+    },
+    highlightChangedVars: function(){
+        const vars = document.querySelectorAll('[class^=tippy-]');
+        for (const variable of vars) {
+            app.punctualClass(variable, 'highlight', 1500);
         }
     }
 }

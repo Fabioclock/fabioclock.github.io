@@ -85,7 +85,8 @@ const app = {
 
         for (let tipElement of numberTips ){
             tempTippy = tippy(tipElement, {
-                'content': code.currentIterator
+                'content': code.currentIterator,
+                'theme': 'light',
             })
             app.tippyInstances.push(tempTippy);
         }
@@ -96,6 +97,8 @@ const app = {
             const key = (code.loopType === 'enumerable') ? code.enumerable[code.currentIterator].key : code.currentIterator;
             tempTippy = tippy(tipElement, {
                 'content': key,
+                'theme': 'light',
+
             })
             app.tippyInstances.push(tempTippy);
         }
@@ -106,6 +109,8 @@ const app = {
             const value = (code.loopType === 'enumerable') ? code.enumerable[code.currentIterator].value : code.iterable[code.currentIterator];
             tempTippy = tippy(tipElement, {
                 'content': value,
+                'theme': 'light',
+
             })
             app.tippyInstances.push(tempTippy);
         }
@@ -119,6 +124,13 @@ const app = {
             }
         });
         app.tippyInstances = [];
+    },
+    // Gives an element a class, then removes it after a given time
+    punctualClass: function(element, classname, time = 1000) {
+        element.classList.add(classname);
+        setTimeout(function() {
+            element.classList.remove(classname);
+        }, time);
     }
    
 }
