@@ -18,7 +18,7 @@
     --machine-fill: #6e6e6d;
     --machine-stroke: #383838;
     --dark-back:  rgb(37, 37, 37);
-    --highlight: #566ec7;
+    --highlight: #7686bf;
 }
 
 body {
@@ -275,13 +275,14 @@ h2 span {
 .tippy-box {
     font-size: 1.1rem;
 }
-
+[data-tippy-content],
 .tippy-key,
 .tippy-value,
 .tippy-number {
     padding: 0 .2rem;
     border-radius: 2px;
 }
+[data-tippy-content]:hover,
 .tippy-key:hover,
 .tippy-value:hover,
 .tippy-number:hover {
