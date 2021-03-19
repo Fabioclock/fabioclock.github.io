@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Boucles</title>
+</head>
+<body>
+    <div class="top-buttons">
+        <!-- <div class="settings-button"></div> -->
+        <div class="switch-language">
+            <div data-lang="php" class="php active">PHP</div>
+            <div data-lang="js" class="js">JS</div>
+        </div>
+    </div>
+    <main>
+        <h1>Les boucles</h1>
+        <nav class="loop-menu">
+            <ul></ul>
+        </nav>
+        <div class="wrapper">
+            <section class="explanations">
+               
+            </section>
+            <section class="result">
+                <h2>Résultat</h2>
+                <div class="result-board">
+                    <ul></ul>
+                </div>
+                <div class="loop-buttons">
+                    <ul>
+                        <li class="reset">Réinitialiser</li>
+                        <li class="play">Exécuter une étape</li>
+                        <li class="total-loop">Exécuter la boucle</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
+
+<template data-element="php-for">
+    <h2>Boucle <span>for</span></h2>
+    <div class="intro">
+        La boucle <strong>for</strong> permet de répéter des actions grâce à un ensemble de 3 expressions. Ces expressions décrivent le comportement <strong>initial</strong> de la boucle, ce qu'elle fait à <strong>chaque itération</strong> et à quel moment elle <strong>s'arrête</strong>.
+    </div>
+    <div class="code">
+        <span class="func">for</span> <span class="bracket">(</span> <span data-tippy-content="Cette expression définit l'état initial de la boucle avec un compteur. ">$count <span class="sign">=</span> <span class="num">0</span></span> ; <span data-tippy-content="Cette expression définit la condition arrêtant la boucle.">$count <span class="sign">&lt;</span> <span class="num">5</span></span> ; <span data-tippy-content="Cette expression décrit ce qui est fait à chaque itération : on incrémente le compteur.">$count<span class="sign plus">++</span> </span><span class="bracket">) { </span>
+            <div class="indent"><span class="func-exe">echo</span> <span class="tippy-number">$count</span>;</div>
+        <span class="bracket">}</span>
+    </div>
+    <a class="doc" href="https://www.php.net/manual/fr/control-structures.for.php">Documentation</a>
+</template>
+
+<template data-element="js-for">
+    <h2>Boucle <span>for</span></h2>
+    <div class="intro">
+        La boucle <strong>for</strong> permet de répéter des actions grâce à un ensemble de 3 expressions. Ces expressions décrivent le comportement <strong>initial</strong> de la boucle, ce qu'elle fait à <strong>chaque itération</strong> et à quel moment elle <strong>s'arrête</strong>.
+    </div>
+    <div class="code">
+        <span class="func">for</span> <span class="bracket">(</span> <span data-tippy-content="Cette expression définit l'état initial de la boucle avec un compteur. "><span class="sign">let</span> count <span class="sign">=</span> <span class="num">0</span> </span>;<span data-tippy-content="Cette expression définit la condition arrêtant la boucle."> count <span class="sign">&lt;</span> <span class="num">5</span></span> ;<span data-tippy-content="Cette expression décrit ce qui est fait à chaque itération : on incrémente le compteur."> count<span class="sign plus">++</span> </span><span class="bracket">) { </span>
+            <div class="indent"><span class="num">console</span>.<span class="func-exe">log</span><span class="bracket">(</span><span class="tippy-number">count</span><span class="bracket">);</span></div>
+        <span class="bracket">}</span>
+    </div>
+    <a class="doc" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/for">Documentation</a>
+</template>
+
+
+
+<template data-element="php-while">
+    <h2>Boucle <span>while</span></h2>
+    <div class="intro">
+        La boucle <strong>while</strong> permet de répéter des actions tant qu'une <strong>condition</strong> est valide. Si cette dernière n'est plus valide, la <strong>boucle s'arrête</strong>.
+    </div>
+    <div class="code">
+        <div><span data-tippy-content="Cette variable permettra de contrôler l'exécution de la boucle.">$count <span class="sign">=</span> <span class="num">0</span></span>;</div>
+        <span class="func">while</span> <span class="bracket">(</span> <span data-tippy-content="La boucle s'exécutera tant que cette condition est vraie.">$count <span class="sign">&lt;</span> <span class="num">5</span></span><span class="bracket"> ) { </span>
+            <div class="indent"><span class="func-exe">echo</span> <span class="tippy-number">$count</span>;</div>
+            <div class="indent"><span data-tippy-content="On incrémente le compteur pour pouvoir arrêter la boucle.">$count<span class="sign plus">++</span></span>;</div>
+        <span class="bracket">}</span>
+    </div>
+    <a class="doc" href="https://www.php.net/manual/fr/control-structures.while.php">Documentation</a>
+</template>
+
+
+<template data-element="js-while">
+    <h2>Boucle <span>while</span></h2>
+    <div class="intro">
+        La boucle <strong>while</strong> permet de répéter des actions tant qu'une <strong>condition</strong> est valide. Si cette dernière n'est plus valide, la <strong>boucle s'arrête</strong>.
+    </div>
+    <div class="code">
+        <div><span data-tippy-content="Cette variable permettra de contrôler l'exécution de la boucle."><span class="sign">let</span> count <span class="sign">=</span> <span class="num">0</span>;</span></div>
+        <span class="func">while</span> <span class="bracket">(</span><span data-tippy-content="La boucle s'exécutera tant que cette condition est vraie."> count <span class="sign">&lt;</span> <span class="num">5</span></span><span class="bracket"> ) { </span>
+            <div class="indent"><span class="num">console</span>.<span class="func-exe">log</span><span class="bracket">(</span><span class="tippy-number">count</span><span class="bracket">);</span></div>
+            <div class="indent"><span data-tippy-content="On incrémente le compteur pour pouvoir arrêter la boucle.">count<span class="sign plus">++</span></span>;</div>
+        <span class="bracket">}</span>
+    </div>
+    <a class="doc" href="https://www.php.net/manual/fr/control-structures.while.php">Documentation</a>
+</template>
+
+<template data-element="php-foreach">
+    <h2>Boucle <span>foreach</span></h2>
+    <div class="intro">
+        La boucle <strong>foreach</strong> permet de <strong>parcourir</strong> un tableau et de récupérer dans une variable chacune des <strong>clés</strong> et des <strong>valeurs</strong>.
+    </div>
+    <div class="code">
+        <div>$array <span class="sign">=</span> <span class="bracket">[</span></div>
+            <div class="fill"></div>
+        <div><span class="bracket">]</span>;</div>
+        <div class="line"></div>
+        <span class="func">foreach</span> <span class="bracket">(</span> $array <span class="sign">as</span> <span class="tippy-key" data-type="enumerable">$key</span> <span class="sign">=&gt;</span> <span class="tippy-value" data-type="enumerable">$value</span><span class="bracket"> ) { </span>
+            <div class="indent"><span class="func-exe">echo</span>  <span class="tippy-value" data-type="enumerable">$value</span>;</div>
+        <span class="bracket">}</span>
+    </div>
+    <a class="doc" href="https://www.php.net/manual/fr/control-structures.foreach.php">Documentation</a>
+</template>
+
+<template data-element="js-for...of">
+    <h2>Boucle <span>for...of</span></h2>
+    <div class="intro">
+        La boucle <strong>for...of</strong> permet de <strong>parcourir</strong> un tableau et de récupérer dans une variable chacune des <strong>valeurs</strong>.
+    </div>
+    <div class="code">
+        <div><span class="sign">let</span> array <span class="sign">=</span> <span class="bracket">[</span></div>
+            <div class="fill"></div>
+        <div><span class="bracket">]</span>;</div>
+        <div class="line"></div>
+        <span class="func">for</span> <span class="bracket">(</span> <span class="sign">const</span> <span class="tippy-value" data-type="enumerable">value</span> <span class="sign">of</span> array <span class="bracket"> ) { </span>
+            <div class="indent"><span class="num">console</span>.<span class="func-exe">log</span><span class="bracket">(</span><span class="tippy-value" data-type="enumerable">value</span><span class="bracket">);</span></div>
+        <span class="bracket">}</span>
+    </div>
+    <a class="doc" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/for...of">Documentation</a>
+</template>
+
+
+<template data-element="js-for...in">
+    <h2>Boucle <span>for...in</span></h2>
+    <div class="intro">
+        La boucle <strong>for...in</strong> permet de <strong>parcourir</strong> les clés d'un <strong>tableau</strong> ou les propriétés d'un <strong>objet</strong> et de récupérer dans une variable chacune des <strong>clés / propriétés</strong>.
+    </div>
+    <div class="code">
+        <div><span class="sign">let</span> object <span class="sign">=</span> <span class="bracket">{</span></div>
+            <div class="fill"></div>
+        <div><span class="bracket">}</span>;</div>
+        <div class="line"></div>
+        <span class="func">for</span> <span class="bracket">(</span> <span class="sign">const</span> <span class="tippy-key" >key</span> <span class="sign">in</span> object<span class="bracket"> ) { </span>
+            <div class="indent"><span class="num">console</span>.<span class="func-exe">log</span><span class="bracket">(</span><span class="tippy-value">object<span class="bracket">[</span>key<span class="bracket">]</span></span> <span class="bracket">);</span></div>
+        <span class="bracket">}</span>
+    </div>
+    <a class="doc" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/for...in">Documentation</a>
+</template>
+
+<template data-element="php-enumerable">
+    <div class="indent"><span class="string key"></span> <span class="sign">=&gt;</span> <span class="string value"></span>,</div>
+</template>
+
+<template data-element="js-enumerable">
+    <div class="indent"><span class="key"></span> <span class="sign">: </span> <span class="string value"></span>,</div>
+</template>
+
+
+<template data-element="js-iterable">
+    <div class="indent"><span class="string value"></span>,</div>
+</template>
+
+
+
