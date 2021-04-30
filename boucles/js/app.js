@@ -6,7 +6,7 @@ const app = {
     currentLoop: "",
     menu: {
         'php': ['for', 'while','foreach'],
-        'js': ['for', 'while',  'for...of', 'for...in']
+        'js': ['for', 'while', 'do...while',  'for...of', 'for...in']
     },
     tippyInstances: [],
     init: function(){

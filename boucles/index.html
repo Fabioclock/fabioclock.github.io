@@ -102,7 +102,22 @@
             <div class="indent"><span data-tippy-content="On incrémente le compteur pour pouvoir arrêter la boucle.">count<span class="sign plus">++</span></span>;</div>
         <span class="bracket">}</span>
     </div>
-    <a class="doc" href="https://www.php.net/manual/fr/control-structures.while.php">Documentation</a>
+    <a class="doc" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/while">Documentation</a>
+</template>
+
+<template data-element="js-do...while">
+    <h2>Boucle <span>do...while</span></h2>
+    <div class="intro">
+        La boucle <strong>do...while</strong> a globalement le même fonctionnement que <strong>while</strong>. À ceci près qu'elle commence par exécuter ses instructions, puis vérifie si elle peut les répéter.
+    </div>
+    <div class="code">
+        <div><span data-tippy-content="Cette variable permettra de contrôler l'exécution de la boucle."><span class="sign">let</span> count <span class="sign">=</span> <span class="num">0</span>;</span></div>
+        <span class="func">do</span> <span class="bracket"> { </span>
+            <div class="indent"><span class="num">console</span>.<span class="func-exe">log</span><span class="bracket">(</span><span class="tippy-number">count</span><span class="bracket">);</span></div>
+            <div class="indent"><span data-tippy-content="On incrémente le compteur pour pouvoir arrêter la boucle.">count<span class="sign plus">++</span></span>;</div>
+        <span class="bracket">}</span> <span class="func">while</span> <span class="bracket">(</span><span data-tippy-content="La boucle s'exécutera tant que cette condition est vraie."> count <span class="sign">&lt;</span> <span class="num">5</span></span><span class="bracket"> )</span>
+    </div>
+    <a class="doc" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/do...while">Documentation</a>
 </template>
 
 <template data-element="php-foreach">

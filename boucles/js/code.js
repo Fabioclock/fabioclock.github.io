@@ -26,6 +26,9 @@ const code = {
     while: {
         endCondition: 5
     },
+    'do...while': {
+        endCondition: 5
+    },
     foreach: {
        endCondition: 'enumerable',
     },
